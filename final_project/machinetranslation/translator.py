@@ -18,7 +18,7 @@ language_translator = LanguageTranslatorV3(
 
 language_translator.set_service_url(url)
 
-def english_to_french(english_text):
+def englishToFrench(english_text):
     """Function to translate from english to french."""
 
     if english_text == "":
@@ -31,7 +31,7 @@ def english_to_french(english_text):
 
     return french_text.get('translations')[0].get('translation')
 
-def french_to_english(french_text):
+def frenchToEnglish(french_text):
     """Function to translate from french to english."""
 
     if french_text == "":
@@ -43,3 +43,5 @@ def french_to_english(french_text):
     ).get_result()
 
     return english_text.get('translations')[0].get('translation')
+
+print(englishToFrench ('hello'))
